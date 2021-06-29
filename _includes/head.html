@@ -1,0 +1,32 @@
+<head>
+   <meta charset="UTF-8">
+   {% if page.url == "/" %}
+       <title>{{ page.title }}</title>
+       <meta property="og:title" content="{{ page.title }}"/>
+    {% else %}
+       <title>{{ page.company | append: " - " | append: page.title }}</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.summary }}">
+    <meta property="og:site_name" content="Zack Gemmell"/>
+    <meta property="og:image" content="{{site.url}}/assets/img/share.jpg"/>
+    <meta property="og:url" content="{{site.url}}"/>
+    <meta property="og:type" content="profile"/>
+    <meta property="og:profile:first_name" content="Zack"/>
+    <meta property="og:profile:last_name" content="Gemmell"/>
+    <meta property="og:type" content="profile"/>
+    <meta property="og:description" content="{{ page.summary }}"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1KJ12Q0F6J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1KJ12Q0F6J');
+</script>
+
+</head>
